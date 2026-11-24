@@ -4,24 +4,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omkar's Portfolio</title>
+    <title>Omkar | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 9%;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #334155;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            padding: 110px 9%;
+            background: #eaf1ff;
+        }
+
+        .hero small {
+            color: #2563eb;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 550px;
+            color: #64748b;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 13px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 75px 9%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            max-width: 750px;
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 18px 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .projects {
+            background: #eef2f7;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px #00000012;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+            color: #2563eb;
+        }
+
+        .project p {
+            color: #64748b;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #172033;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Portfolio</h1>
+    <header>
+        <div class="logo">OMKAR.</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <h2>About Me</h2>
-    <p>Hello! My name is Omkar. I am an engineering student.</p>
+    <div class="hero" id="home">
+        <small>WELCOME TO MY PORTFOLIO</small>
+        <h1>Hello, I'm <span>Omkar.</span></h1>
+        <p>
+            Engineering Student | Web Development Learner
+            <br>
+            I enjoy learning new technologies and building creative web projects.
+        </p>
+        <a href="#projects" class="btn">Explore My Work</a>
+    </div>
 
-    <h2>My Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Java</li>
-    </ul>
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            Hello! My name is Omkar. I am an engineering student
+            interested in web development and programming.
+            I am continuously learning new skills and improving
+            my knowledge by creating practical projects.
+        </p>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: omkar@example.com</p>
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Web Development Lab</h3>
+                <p>My practical work from P1 to P13.</p>
+            </div>
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A personal website built using HTML and CSS.</p>
+            </div>
+            <div class="project">
+                <h3>Learning Projects</h3>
+                <p>Small projects created while learning programming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <p>Thank you for visiting my portfolio.</p>
+        <a href="mailto:omkar@example.com" class="btn">Contact Me</a>
+    </section>
+
+    <footer>
+        © 2026 Omkar. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
